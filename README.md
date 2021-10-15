@@ -1,3 +1,4 @@
+<br><br>
 <p align="center"><img align="center" src="/.github/atomss.svg"/></p>
 <br><br>
 
@@ -24,6 +25,8 @@ Atomss generates classes exponentially depending on your configuration. Use Purg
 
 # <p align="center">Full documentation</p>
 
-Retrouvez la documentation complète sur : https://getnapi.com/atomss
+Find the complete documentation on: https://getnapi.com/atomss
 
+<br><br>
 <p align="center"><img align="center" src="/.github/napi.svg"/></p>
+<br><br>
