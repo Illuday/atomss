@@ -1,0 +1,23 @@
+@use "sass:list";
+
+@each $alias, $value in $borders { 
+    $classes: list.append($classes, "bd-#{$alias}" "border-width" "#{$value}");
+    $classes: list.append($classes, "bdt-#{$alias}" "border-top-width" "#{$value}");
+    $classes: list.append($classes, "bdb-#{$alias}" "border-bottom-width" "#{$value}");
+    $classes: list.append($classes, "bdl-#{$alias}" "border-left-width" "#{$value}");
+    $classes: list.append($classes, "bdr-#{$alias}" "border-right-width" "#{$value}");
+    $classes: list.append($classes, "bdx-#{$alias}" "border-left-width: #{$value}; border-right-width" "#{$value}");
+    $classes: list.append($classes, "bdy-#{$alias}" "border-top-width: #{$value}; border-bottom-width" "#{$value}");
+}
+
+@each $alias, $value in $borderRadius { 
+    $classes: list.append($classes, "bdra-#{$alias}" "border-radius" "#{$value}");
+    $classes: list.append($classes, "bdrat-#{$alias}" "border-top-left-radius" "#{$value}");
+    $classes: list.append($classes, "bdrab-#{$alias}" "border-bottom-right-radius" "#{$value}");
+    $classes: list.append($classes, "bdral-#{$alias}" "border-bottom-left-radius" "#{$value}");
+    $classes: list.append($classes, "bdrar-#{$alias}" "border-top-right-radius" "#{$value}");
+    $classes: list.append($classes, "bdrax-#{$alias}" "border-bottom-left-radius: #{$value}; border-top-right-radius" "#{$value}");
+    $classes: list.append($classes, "bdray-#{$alias}" "border-bottom-right-radius: #{$value}; border-top-left-radius" "#{$value}");
+}
+
+@each $alias, $value in $borderStyles { $classes: list.append($classes, "bds-#{$alias}" "border-style" "#{$value}"); }

@@ -1,0 +1,18 @@
+@use "sass:list";
+@use "sass:math";
+
+@each $alias, $value in $aligns { 
+    $classes: list.append($classes, "ai-#{$alias}" "align-items" "#{$value}");
+    $classes: list.append($classes, "as-#{$alias}" "align-self" "#{$value}");
+    $classes: list.append($classes, "ac-#{$alias}" "align-content" "#{$value}");
+}
+
+@each $alias, $value in $justifies { 
+    $classes: list.append($classes, "jc-#{$alias}" "justify-content" "#{$value}");
+    $classes: list.append($classes, "js-#{$alias}" "justify-self" "#{$value}");
+}
+
+@each $alias, $value in $directions { $classes: list.append($classes, "fld-#{$alias}" "flex-direction" "#{$value}"); }
+@each $alias, $value in $wraps { $classes: list.append($classes, "flw-#{$alias}" "flex-wrap" "#{$value}"); }
+@each $value in $flexSizes { $classes: list.append($classes, "fl-#{$value}" "flex" math.div($value, 100)); }
+

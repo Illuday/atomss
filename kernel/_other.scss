@@ -1,0 +1,11 @@
+@use "sass:list";
+
+@each $alias, $value in $cursors { $classes: list.append($classes, "cu-#{$alias}" "cursor" "#{$value}"); }
+@each $alias, $value in $backgrounds { $classes: list.append($classes, "b-#{$alias}" "background" "#{$value}"); }
+@each $alias, $value in $backgroundImages { $classes: list.append($classes, "bi-#{$alias}" "background-image" "url('#{$value}')"); }
+@each $alias, $value in $backgroundSizes { $classes: list.append($classes, "bs-#{$alias}" "background-size" "#{$value}"); }
+@each $alias, $value in $backgroundPositions { $classes: list.append($classes, "bp-#{$alias}" "background-position" "#{$value}"); }
+@each $alias, $value in $backgroundAttachements { $classes: list.append($classes, "ba-#{$alias}" "background-attachment" "#{$value}"); }
+@each $alias, $value in $backgroundRepeats { $classes: list.append($classes, "br-#{$alias}" "background-repeat" "#{$value}"); }
+@each $alias, $value in $objectFits { $classes: list.append($classes, "of-#{$alias}" "object-fit" "#{$value}"); }
+@each $alias, $value in $transitions { $classes: list.append($classes, "tr-#{$alias}" "transition" "#{$value}"); }

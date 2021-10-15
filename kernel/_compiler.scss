@@ -1,0 +1,18 @@
+@each $c, $p, $v in $classes {
+    .#{$c} { #{$p}: #{$v}; } 
+    .\!#{$c} { #{$p}: #{$v}!important; } 
+
+    @each $alias, $pseudo in $pseudos {
+        .\@#{$alias}\:#{$c}:#{$pseudo} { #{$p}: #{$v}; }
+        .\!\@#{$alias}\:#{$c}:#{$pseudo} { #{$p}: #{$v}!important; }
+    }    
+}
+
+@each $alias, $breakpoint in $breakpoints {
+    @media (max-width: $breakpoint) { 
+        @each $c, $p, $v in $classes {
+            .#{$alias}\:#{$c} { #{$p}: #{$v}; }
+            .\!#{$alias}\:#{$c} { #{$p}: #{$v}!important; }
+        }
+    } 
+}

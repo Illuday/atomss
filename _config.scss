@@ -1,0 +1,366 @@
+/**
+ * ANCHOR COLORS
+ */
+$colors: (
+    pwh: (#FFF, #FFF),
+    wh: (#EFEFEF, #001E26),
+    gr: (#5F7A82, #5F7A82),
+    bl: (#001E26, #EFEFEF),
+    pri: (#1EE2BD, #1EE2BD),
+    sec: (#8c4bff, #8c4bff),
+
+    no: (transparent, transparent),
+
+    er: (#ce7171, #ce7171),
+    su: (#2A9D8F, #2A9D8F)
+);
+
+$alphas: (80, 70, 60, 50, 40, 30, 20, 10);
+$lights: (30, 70);
+$darks: (10, 30);
+
+/**
+ * ANCHOR FONTS — Don't use @import from Gfont, lower performances
+ */
+$fonts: (
+    'read': "Poppins",
+    'code': "Source Code Pro",
+);
+
+$fontWeights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+$fontDefault: ( Poppins: 500 );
+$fontSizeDefault: 1.4rem;
+
+$fontSizes: (
+    '12': 1.2rem,
+    '14': 1.4rem,
+    '16': 1.6rem,
+    '18': 1.8rem,
+    '20': 2.0rem,
+    '24': 2.4rem,
+    '30': 3.0rem,
+    '36': 3.6rem,
+    '48': 4.8rem
+);
+
+$lineHeights: (
+    '12': 1.2rem,
+    '14': 1.4rem,
+    '20': 2.0rem,
+    '24': 2.4rem,
+    '30': 3.0rem,
+    '40': 4.0rem,
+);
+
+$letterSpacings: (
+    '1': 1px,
+    '2': 2px,
+    '3': 3px,
+    '4': 4px,
+    '5': 5px,
+    '6': 6px,
+);
+
+$textIndents: (
+    '10': 10px,
+    '20': 20px,
+);
+
+$textShadows: (
+    1: 5px 5px #00FFAC
+);
+
+$textTransforms: (
+    'n': none,
+    'c': capitalize,
+    'u': uppercase,
+    'l': lowercase,
+);
+
+$textAligns: (
+    'l': left,
+    'c': center,
+    'r': right,
+    'j': justify,
+);
+
+$textDecorations: (
+    'u': underline,
+    'o': overline,
+    'lt': line-through,
+    'n': none,
+);
+
+$textOverflows: (
+    'e': ellipsis,
+);
+
+$whiteSpaces: (
+    'n': normal,
+    'nw': nowrap,
+);
+
+/**
+ * ANCHOR SIZING
+ */
+$sizings: (
+    'auto': auto,
+    '20vh': 20vh,
+    '100vh': 100vh,
+    '10vw': 10vw,
+
+    '10px': 10px,
+    '20px': 20px,
+    '50px': 50px,
+    '300px': 300px,
+    '600px': 600px,
+    '900px': 900px,
+
+    '10p': 10%,
+    '20p': 20%,
+    '30p': 30%,
+    '40p': 40%,
+    '50p': 50%,
+    '60p': 60%,
+    '70p': 70%,
+    '80p': 80%,
+    '90p': 90%,
+    '100p': 100%,
+);
+
+/**
+ * ANCHOR SPACINGS
+ */
+$spacings: (
+    '0': 0,
+    '2': 2px,
+    '5': 5px,
+    '8': 8px,
+    '10': 10px,
+    '15': 15px,
+    '20': 20px,
+    'n20': -20px,
+    '40': 40px,
+    'n40': -40px,
+    '50': 50px,
+    '60': 60px,
+    '80': 80px,
+    '160': 160px,
+    '10p': 10%,
+    'auto': auto,
+);
+
+/**
+ * ANCHOR BORDERS
+ */
+$borders: (
+    '0': 0,
+    '1': 1px,
+    '2': 2px,
+    '5': 5px,
+    '10': 10px,
+);
+
+$borderRadius: (
+    '0': 0,
+    '5': 5px,
+    '10': 10px,
+    '20': 20px,
+    '30': 30px,
+    '50': 50px,
+    '1000': 1000px,
+);
+
+$borderStyles: (
+    's': solid,
+    'd': dashed,
+    'do': dotted,
+);
+
+/**
+ * ANCHOR BOXS
+ */
+$positions: ( // NOTE Conflict possible with Padding
+    'a': 'absolute',
+    'r': 'relative',
+    'f': 'fixed',
+    's': 'sticky',
+);
+
+$displays: (
+    'n': 'none',
+    'i': 'inline',
+    'b': 'block',
+    'ib': 'inline-block',
+    'f': 'flex',
+    'if': 'inline-flex',
+    'g': 'grid'
+);
+
+$overflows: (
+    'h': 'hidden',
+    'a': 'auto',
+    's': 'scroll',
+    'v': 'visible',
+);
+
+$opacities: 0, 25, 50, 75, 100;
+
+$boxSizings: (
+    'cb': 'content-box',
+    'bb': 'border-box'
+);
+
+$boxShadows: (
+    '0': 0 0 0 0 rgba(255,255,255,0),
+    '1': 0 2px 10px 0 rgba(23, 26, 29, 0.4),
+);
+
+$indexes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20;
+
+/**
+ * ANCHOR FLEXS
+ */
+$flexSizes: 10, 20, 33, 40, 50, 60, 90, 100;
+
+$aligns: (
+    'e': 'flex-end',
+    's': 'flex-start',
+    'c': 'center',
+    'st': 'stretch',
+);
+
+$justifies: (
+    'e': 'flex-end',
+    's': 'flex-start',
+    'c': 'center',
+    'st': 'stretch',
+    'sb': 'space-between',
+    'sa': 'space-around',
+    'se': 'space-evenly',
+);
+
+$directions: (
+    'c': 'column',
+    'cr': 'column-reverse',
+    'r': 'reverse',
+    'rr': 'row-reverse',
+);
+
+$wraps: (
+    'nw': 'nowrap',
+    'w': 'wrap',
+    'wr': 'wrap-reverse'
+);
+
+/**
+ * ANCHOR GRIDS
+ */
+$gridTemplateColumns: (
+    "1": repeat(auto-fit, minmax(30px, 1fr)),
+    "2": repeat(3, minmax(auto, 1fr))
+);
+
+$gridTemplateRows: (
+    "1": repeat(auto-fit, minmax(30px, 1fr)),
+    "2": repeat(3, minmax(auto, 1fr))
+);
+
+$gridTemplateAreas: (
+    "1": "\"a a a\" \"b b c\" \"b b c\""
+);
+
+$gridAreas: (
+    'a': 'a',
+    'b': 'b',
+    'c': 'c'
+);
+
+$gaps: (
+    '20': '20px'
+);
+
+/**
+ * ANCHOR OTHERS
+ */
+$cursors: (
+    'p': 'pointer',
+    'm': 'move',
+    'h': 'help',
+    'g': 'grab',
+    'gb': 'grabbing',
+    'zi': 'zoom-in',
+    'zo': 'zoom-out',
+    'na': 'not-allowed'
+);
+
+$backgrounds: (
+    'gr-pri-0': linear-gradient(0deg, var(--pri), var(--sec)),
+    'gr-pri-90': linear-gradient(90deg, var(--pri), var(--sec))
+);
+
+$backgroundImages: (
+    'placeholder': '/placeholder.png',
+);
+
+$backgroundSizes: (
+    'c': 'cover',
+);
+
+$backgroundPositions: (
+    'cc': 'center center',
+);
+
+$backgroundAttachements: (
+    's': 'scroll',
+    'f': 'fixed',
+    'l': 'local',
+);
+
+$backgroundRepeats: (
+    'nr': 'no-repeat',
+    'x': 'repeat-x',
+    'y': 'repeat-y',
+);
+
+$objectFits: (
+    'n': 'none',
+    'f': 'fill',
+    'c': 'cover',
+    'co': 'contain',
+);
+
+$transitions: (
+    'a4': 'all .4s',
+    'h50': 'height 5s',
+);
+
+/**
+ * ANCHOR BREAKPOINTS
+ */
+$breakpoints: (
+    'xxl': 1536px,
+    'xl': 1280px,
+    'lg': 1024px,
+    'md': 768px,
+    'sm': 640px,
+    'xs': 480px,
+    'xxs': 320px,
+    'xxxs': 240px,
+);
+
+/**
+ * ANCHOR PSEUDOS
+ */
+$pseudos: (
+    'h': 'hover',
+    'f': 'focus',
+    'a': 'active',
+    'l': 'link', 
+    'v': 'visited',
+    'fc': 'first-child',
+    'lc': 'last-child',
+    'nc2': 'nth-child(2)',
+    'af': 'after',
+    'be': 'before',
+);

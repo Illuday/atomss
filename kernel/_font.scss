@@ -1,0 +1,26 @@
+@use "sass:list";
+
+@each $font, $weight in $fontDefault {
+    html, *, button, a, p, h1, h2, h3, h4, h5, h6, li { // DEFAULTS
+        font-family: $font;
+        font-weight: $weight;
+        line-height: 100%;
+    }
+
+    html * {
+        font-size: $fontSizeDefault;
+    }
+}
+
+@each $alias, $value in $fonts { $classes: list.append($classes, "f-#{$alias}" "font-family" "#{$value}, sans-serif"); }
+@each $value in $fontWeights { $classes: list.append($classes, "fw-#{$value}" "font-weight" "#{$value}"); }
+@each $alias, $value in $fontSizes { $classes: list.append($classes, "fs-#{$alias}" "font-size" "#{$value}"); }
+@each $alias, $value in $lineHeights { $classes: list.append($classes, "lh-#{$alias}" "line-height" "#{$value}"); }
+@each $alias, $value in $letterSpacings { $classes: list.append($classes, "ls-#{$alias}" "letter-spacing" "#{$value}"); }
+@each $alias, $value in $textIndents { $classes: list.append($classes, "ti-#{$alias}" "text-indent" "#{$value}"); }
+@each $alias, $value in $textShadows { $classes: list.append($classes, "ts-#{$alias}" "text-shadow" "#{$value}"); }
+@each $alias, $value in $textTransforms { $classes: list.append($classes, "tt-#{$alias}" "text-transform" "#{$value}"); }
+@each $alias, $value in $textAligns { $classes: list.append($classes, "ta-#{$alias}" "text-align" "#{$value}"); }
+@each $alias, $value in $textDecorations { $classes: list.append($classes, "td-#{$alias}" "text-decoration" "#{$value}"); }
+@each $alias, $value in $textOverflows { $classes: list.append($classes, "to-#{$alias}" "text-overflow" "#{$value}"); }
+@each $alias, $value in $whiteSpaces { $classes: list.append($classes, "ws-#{$alias}" "white-space" "#{$value}"); }

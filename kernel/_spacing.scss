@@ -1,0 +1,25 @@
+@use "sass:list";
+
+@each $alias, $value in $spacings { 
+    $classes: list.append($classes, "m-#{$alias}" "margin" "#{$value}"); 
+    $classes: list.append($classes, "mt-#{$alias}" "margin-top" "#{$value}"); 
+    $classes: list.append($classes, "mb-#{$alias}" "margin-bottom" "#{$value}"); 
+    $classes: list.append($classes, "ml-#{$alias}" "margin-left" "#{$value}"); 
+    $classes: list.append($classes, "mr-#{$alias}" "margin-right" "#{$value}"); 
+    $classes: list.append($classes, "mx-#{$alias}" "margin-right: #{$value}; margin-left" "#{$value}"); 
+    $classes: list.append($classes, "my-#{$alias}" "margin-top: #{$value}; margin-bottom" "#{$value}"); 
+
+    $classes: list.append($classes, "p-#{$alias}" "padding" "#{$value}"); 
+    $classes: list.append($classes, "pt-#{$alias}" "padding-top" "#{$value}"); 
+    $classes: list.append($classes, "pb-#{$alias}" "padding-bottom" "#{$value}"); 
+    $classes: list.append($classes, "pl-#{$alias}" "padding-left" "#{$value}"); 
+    $classes: list.append($classes, "pr-#{$alias}" "padding-right" "#{$value}"); 
+    $classes: list.append($classes, "px-#{$alias}" "padding-right: #{$value}; padding-left" "#{$value}"); 
+    $classes: list.append($classes, "py-#{$alias}" "padding-top: #{$value}; padding-bottom" "#{$value}"); 
+
+    $classes: list.append($classes, "t-#{$alias}" "top" "#{$value}"); 
+    $classes: list.append($classes, "b-#{$alias}" "bottom" "#{$value}"); 
+    $classes: list.append($classes, "l-#{$alias}" "left" "#{$value}"); 
+    $classes: list.append($classes, "r-#{$alias}" "right" "#{$value}"); 
+
+}

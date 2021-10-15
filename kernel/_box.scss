@@ -1,0 +1,10 @@
+@use "sass:list";
+@use "sass:math";
+
+@each $alias, $value in $positions { $classes: list.append($classes, "p-#{$alias}" "position" "#{$value}"); }
+@each $alias, $value in $displays { $classes: list.append($classes, "d-#{$alias}" "display" "#{$value}"); }
+@each $alias, $value in $overflows { $classes: list.append($classes, "of-#{$alias}" "overflow" "#{$value}"); }
+@each $value in $opacities { $classes: list.append($classes, "o-#{$value}" "opacity" math.div($value, 100)); }
+@each $alias, $value in $boxSizings { $classes: list.append($classes, "bs-#{$alias}" "box-sizing" "#{$value}"); }
+@each $alias, $value in $boxShadows { $classes: list.append($classes, "bsh-#{$alias}" "box-shadow" "#{$value}"); }
+@each $value in $indexes { $classes: list.append($classes, "z-#{$value}" "z-index" "#{$value}"); }

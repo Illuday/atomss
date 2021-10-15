@@ -1,0 +1,8 @@
+@use "sass:list";
+@use "sass:math";
+
+@each $alias, $value in $gridTemplateColumns { $classes: list.append($classes, "gtc-#{$alias}" "grid-template-columns" "#{$value}"); }
+@each $alias, $value in $gridTemplateRows { $classes: list.append($classes, "gtr-#{$alias}" "grid-template-rows" "#{$value}"); }
+@each $alias, $value in $gridTemplateAreas { $classes: list.append($classes, "gta-#{$alias}" "grid-template-areas" #{$value}); }
+@each $alias, $value in $gridAreas { $classes: list.append($classes, "ga-#{$alias}" "grid-area" "#{$value}"); }
+@each $alias, $value in $gaps { $classes: list.append($classes, "g-#{$alias}" "gap" "#{$value}"); }

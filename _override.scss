@@ -1,0 +1,19 @@
+::selection {
+    background-color: var(--pri);
+}
+
+::placeholder {
+    color: var(--pwh-d30);
+}
+
+button, a{
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.abs-c {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,64 @@
+@use "sass:math";
+@use "sass:list";
+
+:root {
+    @each $alias, $color in $colors {
+        --#{$alias}: #{list.nth($color, 1)};
+
+        @each $alpha in $alphas {
+            --#{$alias}-a#{$alpha}: #{rgba(list.nth($color, 1), math.div($alpha, 100))}
+        }
+
+        @each $dark in $darks {
+            --#{$alias}-d#{$dark}: #{darken(list.nth($color, 1), $dark)}
+        }
+
+        @each $light in $lights {
+            --#{$alias}-l#{$light}: #{lighten(list.nth($color, 1), $light)}
+        }
+    }
+}
+
+[data-theme="dark"] {
+        @each $alias, $color in $colors {
+            --#{$alias}: #{list.nth($color, 2)};
+    
+            @each $alpha in $alphas {
+                --#{$alias}-a#{$alpha}: #{rgba(list.nth($color, 2), math.div($alpha, 100))}
+            }
+    
+            @each $dark in $darks {
+                --#{$alias}-d#{$dark}: #{darken(list.nth($color, 2), $dark)}
+            }
+    
+            @each $light in $lights {
+                --#{$alias}-l#{$light}: #{lighten(list.nth($color, 2), $light)}
+            }
+        }
+    }
+
+
+@each $alias, $color in $colors {
+    $classes: list.append($classes, "c-#{$alias}" "color" var(--#{$alias}));
+    $classes: list.append($classes, "fill-#{$alias}" "fill" var(--#{$alias}));
+    $classes: list.append($classes, "bc-#{$alias}" "background-color" var(--#{$alias}));
+    $classes: list.append($classes, "bdc-#{$alias}" "border-color" var(--#{$alias}));
+
+    @each $alpha in $alphas {
+        $classes: list.append($classes, "c-#{$alias}-a#{$alpha}" "color" var(--#{$alias}-a#{$alpha}));
+        $classes: list.append($classes, "bc-#{$alias}-a#{$alpha}" "background-color" var(--#{$alias}-a#{$alpha}));
+        $classes: list.append($classes, "bdc-#{$alias}-a#{$alpha}" "border-color" var(--#{$alias}-a#{$alpha}));
+    }
+
+    @each $dark in $darks {
+        $classes: list.append($classes, "c-#{$alias}-d#{$dark}" "color" var(--#{$alias}-d#{$dark}));
+        $classes: list.append($classes, "bc-#{$alias}-d#{$dark}" "background-color" var(--#{$alias}-d#{$dark}));
+        $classes: list.append($classes, "bdc-#{$alias}-d#{$dark}" "border-color" var(--#{$alias}-d#{$dark}));
+    }
+
+    @each $light in $lights {
+        $classes: list.append($classes, "c-#{$alias}-l#{$light}" "color" var(--#{$alias}-l#{$light}));
+        $classes: list.append($classes, "bc-#{$alias}-l#{$light}" "background-color" var(--#{$alias}-l#{$light}));
+        $classes: list.append($classes, "bdc-#{$alias}-l#{$light}" "border-color" var(--#{$alias}-l#{$light}));
+    }
+}

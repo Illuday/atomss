@@ -1,0 +1,10 @@
+@use "sass:list";
+
+@each $alias, $value in $sizings { 
+    $classes: list.append($classes, "h-#{$alias}" "height" "#{$value}"); 
+    $classes: list.append($classes, "w-#{$alias}" "width" "#{$value}"); 
+    $classes: list.append($classes, "mah-#{$alias}" "max-height" "#{$value}"); 
+    $classes: list.append($classes, "maw-#{$alias}" "max-width" "#{$value}"); 
+    $classes: list.append($classes, "mih-#{$alias}" "min-height" "#{$value}"); 
+    $classes: list.append($classes, "miw-#{$alias}" "min-width" "#{$value}"); 
+}
